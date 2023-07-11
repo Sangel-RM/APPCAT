@@ -1,0 +1,414 @@
+:root{ 
+    --main-color:#d3ad7f;
+    --Color-Hover: #17202A;
+    --black:#13131a;
+    --bg:#010103;
+    --border: .1rem solid rgba(255,255,255,3);
+    --White: #fff;
+    --FontS_HD: 6rem;
+    --FontS_MD: 2rem;
+    --FontS_LM: 1.6rem;
+    --FontS-Titles: 2.3rem;
+    --FontS-Raza-P: 1.7rem;
+    --border-color: linear-gradient(
+        to right,
+        #d3ad7f 0%,
+        #da7903 100%
+    );
+    --color-Button: linear-gradient(
+        to right,
+        #da7903 0%,
+        #d3ad7f 100%
+    )
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+}
+/* Fuente font-family: 'Roboto', sans-serif; */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+html,body{
+    height: 100vh;
+    background-color: var(--bg);
+    font-size: 62.5%;
+}
+.mainContainer {
+    color: var(--White);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    background-color: var(--bg);
+    opacity: .9;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--main-color);
+}
+.header .logo {
+    width: 80px;
+    height: 90%;
+}
+.header .logo img{
+    width: 100%;
+    height: 100%;
+}
+.header .logoCreator{
+    width: 70px;
+    height: 90%;
+}
+.header .logoCreator img{
+    width: 100%;
+    height: 100%;
+}
+.header .navBar ul{
+    display: flex;
+    gap: 40px;
+}
+.header .navBar ul li a{
+    color: var(--White);
+    font-size: var(--FontS_LM);
+}
+.header .navBar ul li a:hover{
+    padding-bottom: 5px;
+    color: var(--main-color);
+    border-bottom: 1px solid;
+}
+.mainContainer .section{
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 60px;
+}
+/* Section Home */
+.mainContainer #Home{
+    height: 800px;
+    align-items: flex-end;
+    background: url(./img/Cat\ Cool.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: solid 1px var(--main-color);
+}
+.mainContainer #Home .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+.mainContainer #Home .content h1{
+    font-size: var(--FontS_HD);
+    color: var(--main-color);
+    font-weight: 700;
+}
+.mainContainer #Home .content p{
+    font-size: var(--FontS_MD);
+}
+.mainContainer #Home .content .Charget{
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: var(--main-color);
+    font-weight: bold;
+    color: var(--black);
+}
+.mainContainer #Home .content .Charget:hover{
+    width: 160px;
+    color: var(--White);
+    background: #b7721d;
+}
+/* Section Razas */
+.mainContainer #Razas{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    color: var(--main-color);
+    font-size: var(--FontS-Titles);
+}
+.mainContainer #Razas .Slide{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.mainContainer #Razas .Slide .ContentCard{
+    background: var(--border-color); 
+    padding: 2px;
+}
+.mainContainer #Razas .Slide .ContentCard .CardsDataRaza{
+    background-color: var(--bg);
+    height: 100%;
+    padding: 10px;
+}
+#Razas .Slide .ContentCard .CardsDataRaza .Raza a{
+    color: var(--main-color);
+    font-size: var(--FontS-Titles);
+}
+#Razas .Slide .ContentCard .CardsDataRaza .Raza a:hover{
+    color: var(--White);
+}
+#Razas .Slide .ContentCard .CardsDataRaza p{
+    font-size: var(--FontS-Raza-P);
+}
+/* Adoptation */
+#Images{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+#Images .sectionImages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+#Images .sectionImages div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Images .sectionImages div div h1{
+    font-size: var(--FontS_LM);
+    color: var(--White);
+    cursor: default;
+}
+#Images .sectionImages div div .span{
+    font-size: var(--FontS_LM);
+    display: flex;
+    gap: 5px;
+}
+#Images .sectionImages div div .span span{
+    display: flex;
+    align-items: center;
+}
+#Images .sectionImages div .ContentCard{
+    padding: 5px;
+    background: var(--border-color);
+}
+#Images .sectionImages div .ContentCard .CardImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Images .sectionImages div .ContentCard .CardImage figure{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#Images .sectionImages div .ContentCard .CardImage figure img{
+    width: 100%;
+    height: 100%;
+}
+#Images .sectionImages div .ContentCard .CardImage figure img:hover{
+    width: 102%;
+}
+#Images .sectionImages div .ContentCard .CardImage .Like_Image{
+    width: 100%;
+    height: 30px;
+    background: var(--color-Button);
+    color: var(--black);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+#Images .sectionImages div .ContentCard .CardImage .Like_Image:hover{
+    background: transparent;
+    color: white;
+}
+#Images .sectionImages div .ContentCard .CardImage .Like_Image:active{
+    color: #C0392B;
+}
+.fa-heart{
+    font-size: 64px;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    color: #C0392B;
+}
+.fa-heart.like{
+    animation: 1s like ease-in-out;
+}
+.heart-counter{
+    color: #C0392B;
+}
+#Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 140px;
+    background: var(--border-color);
+}
+#Form h1{
+    color: var(--black); 
+    font-weight: bold;
+    font-size: var(--FontS_MD);
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + .label {
+    width: 65%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+.inputfile + .label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+.iborrainputfile {
+	font-size:16px; 
+    font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+}
+.inputfile-1 + .label {
+    color: var(--black);
+    background-color: var(--White);
+    border-radius: 2px;
+}
+.label{
+    border: 1px solid transparent;
+}
+#Form .Submit{
+    width: 65%;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 0.625rem 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+#Form .Submit:hover, .label:hover{
+    background-color: transparent;
+    border: 1px solid var(--White);
+    color: var(--White);
+}
+/* Destacados */
+#Destacados {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+#Destacados .destacados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+#Destacados .destacados .content_card{
+    background: var(--border-color);
+    padding: 5px;
+}
+#Destacados .destacados .content_card .sliderCards {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg);
+}
+#Destacados .destacados .content_card .sliderCards figure{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#Destacados .destacados .content_card .sliderCards figure img{
+    width: 100%;
+    height: 100%;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+footer p{
+    font-size: var(--FontS_LM);
+}
+footer .contentFooter .navSocial ul{
+    display: flex;
+    gap: 20px;
+}
+footer .contentFooter .navSocial ul li a i{
+    font-size: 30px;
+    color: var(--White);
+}
+footer .contentFooter .navSocial ul li a i:hover{
+    color: var(--main-color);
+}
+@keyframes like{
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    15%{
+        opacity: 1;
+        scale: 1.2;
+    }
+    30%{
+        opacity: .95;
+    }
+    45%,80%{
+        scale: 1;
+    }
+    100%{
+        scale: 0;
+        opacity: 1;
+    }
+}
