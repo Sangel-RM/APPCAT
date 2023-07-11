@@ -281,6 +281,25 @@ html,body{
     font-weight: bold;
     font-size: var(--FontS_MD);
 }
+.sectionFotos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sectionFotos div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--border-color);
+}
+.sectionFotos div p{
+    font-size: var(--FontS_LM);
+    color: var(--black);
+    font-weight: bold;
+}
 .inputfile {
     width: 0.1px;
     height: 0.1px;

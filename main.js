@@ -139,9 +139,11 @@ async function uploadIMG (){
     const data = await res.json();
     if(res.status !== 201){ 
         console.log(`error ${data.message}`);
+        alert("Error archivos permitidos son jpg png gif")
     }else{
         console.log(data);
         console.log(data.url);
         SaveFavory(data.id);
+        alert("Succes imagen subida 🎉");
     }
 }
